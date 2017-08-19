@@ -4,99 +4,78 @@ include $(CLEAR_VARS)
 # List obtained using
 # adb shell busybox --list |sed 's/.$/ \\/' |sed 's/^/\t/'
 BUSYBOX_TOOLS := \
-	[ \
+    [ \
 	[[ \
-	acpid \
 	add-shell \
 	addgroup \
 	adduser \
 	adjtimex \
 	ar \
+	arch \
 	arp \
-	arping \
 	ash \
 	awk \
 	base64 \
 	basename \
-	bash \
-	beep \
-	blkid \
+	bbconfig \
+	blkdiscard \
 	blockdev \
-	bootchartd \
 	brctl \
 	bunzip2 \
 	bzcat \
 	bzip2 \
 	cal \
 	cat \
-	catv \
-	chat \
 	chattr \
 	chgrp \
 	chmod \
 	chown \
-	chpasswd \
-	chpst \
 	chroot \
 	chrt \
-	chvt \
 	cksum \
 	clear \
 	cmp \
 	comm \
+	conspy \
 	cp \
 	cpio \
-	crond \
-	crontab \
-	cryptpw \
-	cttyhack \
 	cut \
 	date \
 	dc \
 	dd \
-	deallocvt \
 	delgroup \
 	deluser \
-	depmod \
 	devmem \
 	df \
-	dhcprelay \
 	diff \
 	dirname \
 	dmesg \
 	dnsd \
 	dnsdomainname \
 	dos2unix \
+	dpkg \
+	dpkg-deb \
 	du \
-	dumpkmap \
-	dumpleases \
 	echo \
 	ed \
 	egrep \
-	eject \
 	env \
-	envdir \
-	envuidgid \
-	ether-wake \
 	expand \
 	expr \
-	fakeidentd \
+	factor \
 	false \
+	fatattr \
 	fbset \
-	fbsplash \
-	fdflush \
-	fdformat \
 	fdisk \
-	fgconsole \
 	fgrep \
 	find \
 	findfs \
 	flock \
 	fold \
 	free \
-	freeramdisk \
 	fsck \
-	fsck.minix \
+	fsfreeze \
+	fstrim \
 	fsync \
 	ftpd \
 	ftpget \
@@ -107,54 +86,33 @@ BUSYBOX_TOOLS := \
 	grep \
 	groups \
 	gunzip \
-	gzip \
-	halt \
 	hd \
 	hdparm \
 	head \
 	hexdump \
-	hostid \
 	hostname \
 	httpd \
 	hwclock \
 	id \
 	ifconfig \
-	ifdown \
-	ifenslave \
-	ifplugd \
-	ifup \
-	inetd \
-	init \
 	insmod \
 	install \
 	ionice \
 	iostat \
-	ip \
 	ipaddr \
 	ipcalc \
-	ipcrm \
-	ipcs \
 	iplink \
 	iproute \
 	iprule \
 	iptunnel \
-	kbd_mode \
 	kill \
 	killall \
 	killall5 \
-	klogd \
-	last \
 	less \
-	linux32 \
-	linux64 \
-	linuxrc \
+	link \
 	ln \
-	loadfont \
-	loadkmap \
-	logger \
 	login \
 	logname \
-	logread \
 	losetup \
 	lpd \
 	lpq \
@@ -162,7 +120,9 @@ BUSYBOX_TOOLS := \
 	ls \
 	lsattr \
 	lsmod \
+	lsof \
 	lspci \
+	lsscsi \
 	lsusb \
 	lzcat \
 	lzma \
@@ -172,18 +132,12 @@ BUSYBOX_TOOLS := \
 	makemime \
 	man \
 	md5sum \
-	mdev \
-	mesg \
 	microcom \
 	mkdir \
 	mkdosfs \
 	mke2fs \
 	mkfifo \
-	mkfs.ext2 \
-	mkfs.minix \
-	mkfs.vfat \
 	mknod \
-	mkpasswd \
 	mkswap \
 	mktemp \
 	modinfo \
@@ -192,27 +146,22 @@ BUSYBOX_TOOLS := \
 	mount \
 	mountpoint \
 	mpstat \
-	mt \
 	mv \
-	nameif \
 	nbd-client \
 	nc \
 	netstat \
 	nice \
+	nl \
 	nmeter \
 	nohup \
-	nslookup \
 	ntpd \
 	od \
-	openvt \
-	passwd \
+	partprobe \
+	paste \
 	patch \
 	pgrep \
 	pidof \
-	ping \
-	ping6 \
 	pipe_progress \
-	pivot_root \
 	pkill \
 	pmap \
 	popmaildir \
@@ -225,14 +174,10 @@ BUSYBOX_TOOLS := \
 	pstree \
 	pwd \
 	pwdx \
-	raidautorun \
 	rdate \
 	rdev \
-	readahead \
 	readlink \
-	readprofile \
 	realpath \
-	reboot \
 	reformime \
 	remove-shell \
 	renice \
@@ -243,52 +188,34 @@ BUSYBOX_TOOLS := \
 	rmdir \
 	rmmod \
 	route \
-	rpm \
 	rpm2cpio \
-	rtcwake \
 	run-parts \
-	runlevel \
-	runsv \
-	runsvdir \
-	rx \
 	script \
 	scriptreplay \
 	sed \
 	sendmail \
 	seq \
-	setarch \
-	setconsole \
-	setfont \
-	setkeycodes \
-	setlogcons \
 	setserial \
 	setsid \
-	setuidgid \
-	sh \
 	sha1sum \
 	sha256sum \
+	sha3sum \
 	sha512sum \
-	showkey \
-	slattach \
+	shred \
+	shuf \
 	sleep \
 	smemcap \
-	softlimit \
 	sort \
 	split \
-	start-stop-daemon \
+	ssl_client \
 	stat \
 	strings \
 	stty \
-	sulogin \
 	sum \
-	sv \
-	svlogd \
 	swapoff \
 	swapon \
-	switch_root \
 	sync \
 	sysctl \
-	syslogd \
 	tac \
 	tail \
 	tar \
@@ -305,48 +232,43 @@ BUSYBOX_TOOLS := \
 	touch \
 	tr \
 	traceroute \
-	traceroute6 \
 	true \
+	truncate \
 	tty \
 	ttysize \
 	tunctl \
-	udhcpc \
-	udhcpd \
 	udpsvd \
+	uevent \
 	umount \
 	uname \
 	uncompress \
 	unexpand \
 	uniq \
 	unix2dos \
+	unlink \
 	unlzma \
 	unlzop \
 	unxz \
 	unzip \
 	uptime \
-	users \
 	usleep \
 	uudecode \
 	uuencode \
 	vconfig \
 	vi \
-	vlock \
 	volname \
-	wall \
 	watch \
-	watchdog \
 	wc \
 	wget \
 	which \
-	who \
 	whoami \
 	whois \
 	xargs \
+	xxd \
 	xz \
 	xzcat \
 	yes \
-	zcat \
-	zcip
+	zcat
 
 LOCAL_MODULE := busybox
 
